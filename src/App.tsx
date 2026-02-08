@@ -11,7 +11,7 @@ export default function App() {
   return (
     <div className="app-shell flex h-screen w-full bg-[var(--color-app-bg)] text-[var(--color-app-text)]">
       <Sidebar />
-      <div className="flex flex-1 flex-col min-w-0 pl-56 sm:pl-56 lg:pl-64">
+      <div className="flex flex-1 flex-col min-w-0 pl-[var(--sidebar-width)]">
         <main className="flex flex-1 flex-col min-h-0">
           <Header />
           <div className="flex-1 overflow-auto">

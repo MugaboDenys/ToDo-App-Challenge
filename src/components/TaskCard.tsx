@@ -2,17 +2,14 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useApp } from '../contexts/AppContext'
 import { STATUSES } from '../api/todos'
-import type { Todo, TodoStatus } from '../types'
+import type { Todo } from '../types'
+import { RxDotsVertical } from "react-icons/rx";
+import { AiOutlinePaperClip } from "react-icons/ai";
+import { IoChatbubbleEllipsesOutline } from "react-icons/io5";
 
-const iconDots = (
-  <svg className="size-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" /></svg>
-)
-const iconPaperclip = (
-  <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" /></svg>
-)
-const iconChat = (
-  <svg className="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
-)
+const iconDots = <RxDotsVertical className="size-5" />
+const iconPaperclip = <AiOutlinePaperClip className="size-4" />
+const iconChat = <IoChatbubbleEllipsesOutline className="size-4" />
 
 type Props = {
   task: Todo
