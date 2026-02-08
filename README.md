@@ -1,6 +1,8 @@
 # ToDo — Task Manager
+Deployed here 👉 **to-do-app-challenge-lac.vercel.app**
 
-A single-page React task manager with **Kanban** and **List** views, dark theme, and English/French i18n. Data is loaded and synced with [DummyJSON Todos API](https://dummyjson.com/docs/todos).
+
+This is a single-page React task manager with **Kanban** and **List** views, dark theme, and English/French i18n. Data is loaded and synced with [DummyJSON Todos API](https://dummyjson.com/docs/todos).
 
 ## Features
 
@@ -72,11 +74,6 @@ Covered areas:
 - **API layer** (`src/api/todos.test.js`): `toAppTodo`, `STATUSES`, `fetchTodos`, `addTodo`, `updateTodo`, `deleteTodo`
 - **ViewSwitcher** (`src/components/ViewSwitcher.test.jsx`): view buttons and `setView` calls
 - **TaskCard** (`src/components/TaskCard.test.jsx`): renders task title and has correct test id
-
-## Deploy
-
-- **Netlify:** Connect the repo and set build command `npm run build` and publish directory `dist`. No extra env vars needed for the app; the app uses public DummyJSON endpoints.
-- **Other static hosts:** Upload the `dist` folder after `npm run build`.
 
 ## Tech stack
 
