@@ -71,9 +71,19 @@ This is a single-page React task manager with **Kanban** and **List** views, dar
 
 Covered areas:
 
-- **API layer** (`src/api/todos.test.js`): `toAppTodo`, `STATUSES`, `fetchTodos`, `addTodo`, `updateTodo`, `deleteTodo`
-- **ViewSwitcher** (`src/components/ViewSwitcher.test.jsx`): view buttons and `setView` calls
-- **TaskCard** (`src/components/TaskCard.test.jsx`): renders task title and has correct test id
+- **API layer** (`src/api/todos.test.ts`): `toAppTodo`, `STATUSES`, `fetchTodos`, `addTodo`, `updateTodo`, `deleteTodo`
+- **ViewSwitcher** (`src/components/ViewSwitcher.test.tsx`): view buttons and `setView` calls
+- **TaskCard** (`src/components/TaskCard.test.tsx`): renders task title and has correct test id
+
+## GitHub Actions
+
+A workflow runs automatically on **pull requests** targeting the `main` branch
+
+- **Workflow file:** `.github/workflows/test.yml`
+- **Trigger:** `pull_request` → branch: `main`
+- **Steps:** Checkout → Setup Node.js 20 (with npm cache) → `npm ci` → `npm run test:run`
+
+The **Tests** job must pass for the PR to show a green check. You can see run history and logs under the repo’s **Actions** tab.
 
 ## Tech stack
 
