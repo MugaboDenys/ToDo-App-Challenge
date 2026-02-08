@@ -135,8 +135,9 @@ i18n
   .init({
     resources,
     fallbackLng: 'en',
+    lng: 'en',
     interpolation: { escapeValue: false },
-    detection: { order: ['localStorage', 'navigator'] },
+    detection: { order: ['localStorage', 'navigator'], caches: ['localStorage'] },
   })
 
 export default i18n
