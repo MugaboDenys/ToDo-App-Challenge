@@ -9,7 +9,7 @@ const iconShare = (
 
 export default function Header() {
   const { t } = useTranslation()
-  const { view, setView, search, setSearch, sort, setSort } = useApp()
+  const { view, setView, search, setSearch, sort, setSort, theme, toggleTheme } = useApp()
 
   return (
     <header className="sticky top-0 z-20 border-b border-[var(--color-app-border)] bg-[var(--color-app-surface)]/95 backdrop-blur">
@@ -23,6 +23,13 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <button type="button" className="rounded-lg p-2 text-[var(--color-app-muted)] transition-colors hover:bg-[var(--color-app-border)]/50 hover:text-[var(--color-app-text)]" aria-label="Share">
             {iconShare}
+          </button>
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-[var(--color-app-muted)] transition-colors hover:bg-[var(--color-app-border)]/50 hover:text-[var(--color-app-text)]"
+          >
+            {theme === 'dark' ? '☀️' : '🌙'} {theme === 'dark' ? 'Light' : 'Dark'}
           </button>
         </div>
       </div>

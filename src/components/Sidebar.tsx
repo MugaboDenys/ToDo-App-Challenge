@@ -54,13 +54,6 @@ export default function Sidebar() {
         <NavItem icon={iconSettings} label={t('sidebar.settings')} />
       </nav>
       <div className="mt-4 space-y-2 px-2">
-        <button
-          type="button"
-          onClick={toggleTheme}
-          className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm text-[var(--color-app-muted)] transition-colors hover:bg-[var(--color-app-border)]/50 hover:text-[var(--color-app-text)]"
-        >
-          {theme === 'dark' ? '☀️' : '🌙'} {theme === 'dark' ? 'Light' : 'Dark'}
-        </button>
         <div className="flex gap-2">
           <button
             type="button"
