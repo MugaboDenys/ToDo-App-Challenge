@@ -1,5 +1,5 @@
 # ToDo — Task Manager
-Deployed 👉 [here](to-do-app-challenge-lac.vercel.app)
+Deployed 👉 [here](https://to-do-app-challenge-lac.vercel.app)
 
 
 This is a single-page React task manager with **Kanban** and **List** views, dark theme, and English/French i18n. Data is loaded and synced with [DummyJSON Todos API](https://dummyjson.com/docs/todos).
