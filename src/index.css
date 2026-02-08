@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-app-bg: #f8fafc;
+  --color-app-surface: #ffffff;
+  --color-app-border: #e2e8f0;
+  --color-app-muted: #64748b;
+  --color-app-text: #0f172a;
+  --color-primary: #7c3aed;
+  --color-primary-hover: #6d28d9;
+  --color-col-todo: #ef4444;
+  --color-col-progress: #8b5cf6;
+  --color-col-review: #f59e0b;
+  --color-col-done: #22c55e;
+  --color-status-high: #ef4444;
+  --color-status-medium: #f97316;
+  --color-status-low: #3b82f6;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --radius-card: 0.75rem;
+  --radius-btn: 0.5rem;
+  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.06), 0 1px 2px -1px rgb(0 0 0 / 0.06);
+  --shadow-sidebar: 2px 0 8px -2px rgb(0 0 0 / 0.05);
+}
+
+@layer base {
+  [data-theme="dark"] {
+    --color-app-bg: #0f172a;
+    --color-app-surface: #1e293b;
+    --color-app-border: #334155;
+    --color-app-muted: #94a3b8;
+    --color-app-text: #f1f5f9;
+    --color-primary: #a78bfa;
+    --color-primary-hover: #c4b5fd;
+    --color-col-todo: #f87171;
+    --color-col-progress: #a78bfa;
+    --color-col-review: #fbbf24;
+    --color-col-done: #4ade80;
+    --color-status-high: #f87171;
+    --color-status-medium: #fb923c;
+    --color-status-low: #60a5fa;
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+    --shadow-sidebar: 2px 0 12px -2px rgb(0 0 0 / 0.4);
+  }
+
+  :root {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    color: var(--color-app-text);
+    background-color: var(--color-app-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
+/* Transitions for theme/layout */
+.app-shell {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar {
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.card-hover:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.1);
+}
+
+[data-theme="dark"] .card-hover:hover {
+  box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.4);
+}
